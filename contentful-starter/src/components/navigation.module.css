@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--size-max-width);
+  align-items: center;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--size-gutter);
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  gap: var(--space-xl);
+}
+
+.navigationItem {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navigationItem a {
+  border-bottom: 1.5px solid transparent;
+  color: currentColor;
+  text-decoration: none;
+}
+
+.navigationItem a:hover {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
+
+.logoLink {
+  display: flex;
+  font-weight: var(--medium);
+  align-items: center;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: var(--space-md);
+}
+
+@media (max-width: 767px) {
+  .logoLink > span:last-child {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+.logo {
+  height: var(--ccl-logo-height);
+  width: var(--ccl-logo-width);
+  display: block;
+  background-image: url("https://codecrafterslabs.com/assets/img/cll_horiz_logo.png");
+}
